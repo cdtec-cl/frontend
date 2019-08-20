@@ -1,37 +1,40 @@
-<template>
-  <div id="app">
+<template>  
 
-    <!--
-      aqui deberia ir el menu y eso po 
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    -->
-
-    <router-view/>
-  </div>
+  <v-app> 
+    <v-content>
+      
+        <Navbar/>
+        <v-layout>
+          <v-flex class="d-none d-sm-none d-md-flex">
+            <Mainmenu /> 
+          </v-flex>
+          <v-flex>
+            <router-view style="min-height: 81vh"/>
+          </v-flex>
+        </v-layout>
+               
+        
+        <Footer/>
+           
+    </v-content>     
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+import Navbar from './components/Navbar.vue'
+import Mainmenu from './components/Menu.vue'
+import Footer from './components/Footer.vue'
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
-
+export default {
+  name: 'App',
+  components:{
+    Navbar,
+    Mainmenu,
+    Footer
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>
