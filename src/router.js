@@ -10,13 +10,19 @@ export default new Router({
     {
       path: '/',
       name: 'login',
-      component: () => import(/* webpackChunkName: "dashboard" */ './components/Login.vue')
+      component: () => import(/* webpackChunkName: "login" */ './components/Login.vue')
     },
     {
       path: '/dashboard',
       name: 'dashboard',
       // Importando vista de manera directa
       component: () => import(/* webpackChunkName: "dashboard" */ './views/Dashboard.vue')
+    },
+    {
+      path: '/farm/:name',
+      name: 'farm',
+      // Importando vista de manera directa
+      component: () => import(/* webpackChunkName: "farm" */ './components/Farm.vue')
     }
   ]
 })

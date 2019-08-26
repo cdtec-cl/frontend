@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>DASHBOARD {{title}} .</h1>
+    
     <v-layout :wrap="true" class="pa-5">
+      <v-flex xs12> <h1>DASHBOARD {{title}} .</h1> </v-flex>
       <v-flex xs12 md7 >
-        <v-flex xs12 class="pa-5">        
+        <v-flex xs12>        
           <v-card 
             :loading="false"
-            :elevation=24            
+            :elevation=1            
           >
             <v-img
               class="white--text"
@@ -31,7 +32,7 @@
         <v-layout>
           <v-flex xs12 md7 class="pa-5">        
             <v-card 
-              :elevation=24
+              :elevation=1
               :loading="false"             
             >
               <v-img
@@ -51,7 +52,7 @@
           <v-flex xs12 md5 class="pa-5">        
             <v-card 
               :loading="true"
-              :elevation=24
+              :elevation=1
             >
               <v-img
                 class="white--text"
@@ -89,7 +90,6 @@
 
 export default {
     name: 'Footer',
-    template: '',
     props: {
         title: 'Dashboard'
     },

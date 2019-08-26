@@ -8,7 +8,7 @@
             <v-list-item-title>Home</v-list-item-title>
         </v-list-item>
 
-        <v-list-item to="/farms">
+        <v-list-item to="/farm/Oficina-cdtec">
             <v-list-item-icon>
             <v-icon>list</v-icon>
             </v-list-item-icon>

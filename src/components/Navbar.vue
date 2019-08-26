@@ -15,6 +15,15 @@
             
         </v-toolbar-title>
         <v-spacer></v-spacer>
+        <v-badge
+          :bottom=true
+          :left=true
+          :overlap=true
+          class="align-self-center"
+        >
+          <template v-slot:badge>0</template>
+          <v-icon>mail</v-icon>
+        </v-badge>
         <v-btn icon>
           <v-icon>info</v-icon>
         </v-btn>
@@ -42,16 +51,50 @@
         right
         Disable-Resize-Watcher=true
         float=true
+        color="primary"
+        
         >
-        <v-list-item>
-            <v-list-item-avatar>
-            <v-icon>account_circle</v-icon>
-            </v-list-item-avatar>
+        <v-layout wrap>
+          <v-flex xs12 class="text-center pt-5">
+            <v-avatar :size=150>
+              <img src="https://picsum.photos/id/11/500/300" alt="avatar">
+            </v-avatar>
+          </v-flex>
+          <v-flex xs12 class="text-center pt-5">
+            <span>Pablo Ossandón</span>
+            <v-divider></v-divider>
+          </v-flex>
+          
+          <v-flex>
+            <v-list flat>              
+              <v-list-item-group color="primary">
+                <v-list-item>
+                  <v-list-item-icon>
+                    <v-icon>power-settings-new</v-icon>
+                  </v-list-item-icon>                  
+                  <v-list-item-content>
+                    <v-list-item-title>Configuración</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
 
-            <v-list-item-content>
-            <v-list-item-title>Usuario admin</v-list-item-title>
-            </v-list-item-content>
-        </v-list-item>
+              <v-divider></v-divider>
+
+              <v-list-item-group color="primary">
+                <v-list-item to="/login">
+                  <v-list-item-icon>
+                    <v-icon>power-settings-new</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Cerrar sesión</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
+          </v-flex>
+        </v-layout>
+        
+            
 
         <v-divider></v-divider>
         
@@ -59,10 +102,7 @@
   </div>
 </template>
 
-
-
 <script>
-
 import Mainmenu from './Menu.vue'
 
 export default {
@@ -70,12 +110,10 @@ export default {
     components: {
         Mainmenu,
     },
-    props:{
-        menu: false,
-        profile: true
-    },
     data() {
         return {
+          menu: false,
+          profile: true
         }
     }
 }
