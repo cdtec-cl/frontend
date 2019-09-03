@@ -6,6 +6,7 @@ import store from './store'
 import './registerServiceWorker'
 import 'es6-promise/auto'
 
+
 //import styles from '@/assets/sb-admin-2.min.module.css'
 import sassStyles from '@/assets/style.module.scss'
 

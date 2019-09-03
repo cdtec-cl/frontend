@@ -1,23 +1,28 @@
 <template>  
 
   <v-app> 
-    <v-content v-show="login">
-      
+    <v-content v-show="login" > 
         <Navbar/>
         <v-layout >
-          <v-flex class="d-none d-sm-none d-md-flex md2">
-            <Mainmenu /> 
+          <v-flex class="d-none d-sm-none d-md-flex">
+            <Mainmenu />
           </v-flex>
           <v-flex>
             <router-view style="min-height: 81vh"/>
           </v-flex>
-        </v-layout>        
+        </v-layout>    
         <Footer/>
-           
+          
     </v-content>
-    <v-content v-show="login != true" >
-      <Login />
+
+  
+    <v-content v-show="login != true">
+      <Login/>
     </v-content>
+
+  
+    
+    
   </v-app>
 </template>
 

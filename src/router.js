@@ -9,11 +9,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: () => import(/* webpackChunkName: "login" */ './components/Login.vue')
-    },
-    {
-      path: '/dashboard',
       name: 'dashboard',
       // Importando vista de manera directa
       component: () => import(/* webpackChunkName: "dashboard" */ './views/Dashboard.vue')
@@ -21,8 +16,23 @@ export default new Router({
     {
       path: '/farm/:name',
       name: 'farm',
-      // Importando vista de manera directa
+      // Importando component de manera directa
       component: () => import(/* webpackChunkName: "farm" */ './components/Farm.vue')
+    },
+    {
+      path: '/pump_system/:name',
+      name: 'pumpsystem',
+      component: () => import(/* webpackChunkName: "pumpsystem" */ './components/Pumpsystem.vue')
+    },
+    {
+      path: '/gateway/:name',
+      name: 'gateway',
+      component: () => import(/* webpackChunkName: "gateway" */ './components/Gateway.vue')
+    },
+    {
+      path: '/zone/:name',
+      name: 'zone',
+      component: () => import(/* webpackChunkName: "zone" */ './components/Zone.vue')
     }
   ]
 })

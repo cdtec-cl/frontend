@@ -8,8 +8,8 @@ export default new Vuex.Store({
     login : false
   },
   mutations: {
-    log_set(state){
-      state.login = state
+    log_set(state_login){
+      state.login = state_login
     }
     
   },

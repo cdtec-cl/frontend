@@ -2,7 +2,7 @@
   <div>
     <v-layout :wrap="true">
     <v-flex>
-        <video muted loop playbackRate="0.5">
+        <video autoplay muted loop playbackRate="0.5">
           <source src="@/assets/CDTEC.mp4" type="video/mp4">
         </video>
       </v-flex>

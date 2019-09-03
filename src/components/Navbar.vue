@@ -51,8 +51,6 @@
         right
         Disable-Resize-Watcher=true
         float=true
-        color="primary"
-        
         >
         <v-layout wrap>
           <v-flex xs12 class="text-center pt-5">
